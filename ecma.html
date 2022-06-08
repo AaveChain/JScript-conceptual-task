@@ -1,0 +1,46 @@
+
+<html>
+<head>
+    <title>ECMA Learn</title>
+</head>
+<body>
+    <h1>Let Keyword</h1>
+    
+</body>
+<script>
+    //.....var&let concepts -var works golobally or locally entire function blockcan delare many times simultaneously, but let works only locally or in the limited score in the block and it can't declare 2 times simultaneuosly.
+    //var a= 20;
+    //let a=10;
+
+    //if(true)
+    //{
+        //let a=100;
+        //var a=20;
+        //console.log(a);
+    //}
+    //console.log(a)
+    //....hoisting - declare the variable in anywhere with var then no effect but with let we can't use hositing.
+    //var a;
+    //let a;       //hoisting work with let only upside of the console
+    //console.log(a)
+    //var a;
+    //let a;
+    // ....let with loop()
+    //for(var i=0; i<10; i++)    //value set at once with var
+    for(let i=0; i<10; i++)      // value changes in each itteration of i
+    {
+        setTimeout(()=>
+        {
+            console.log(i)
+        
+        },1000)
+    }
+
+
+
+    
+
+
+
+</script>
+</html>

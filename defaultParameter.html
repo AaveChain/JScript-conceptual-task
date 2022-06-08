@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>ECMA Learn</title>
+</head>
+
+<body>
+    <h1>Default Parameter</h1>
+
+</body>
+<script>
+    //we can also pass the function in default parameter. and we can also pass all the things(numbers,strings) in return of default parameter.
+    //function someval()
+    //{
+    // return 100;
+    //}
+    //function add(a,b=10,c=someval())
+    //{
+    //return a+b+c;
+    //}
+    //console.log(add(10));
+    function main(a, b = main()) {
+        return a + b;
+
+    }
+    main(); // RangeError: Maximum call stack size exceeded.
+
+
+</script>
+
+</html>

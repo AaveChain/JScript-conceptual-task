@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>ECMA Learn</title>
+</head>
+<body>
+    <h1>Arrow Function</h1>
+    
+</body>
+<script>
+    //let data = [10, 20, 7, 50, 1, 100];
+
+    //function test()          ///named function
+    //{
+        //return 1;
+    //}
+
+    //let test2=function()      //annoymous function
+    //{
+        //return 1
+    //}
+
+    //let test3=()=>               //arrow function
+    //{
+        //return 1
+    //}
+
+    //console.log(test2())
+    //console.log(test3())
+    //let newData=data.map(function(item){      //for all value of array double  
+        //return item*2
+    //})
+    //let newData=data.map((item)=>item*2)
+
+    //console.log(newData)
+
+
+    //.... "this" function with arrow
+    let item={
+        name:"Avineesh",
+        getName:function()
+        {
+            console.log("normal", this)             // call own "This" only
+        },
+        getNameArrow:()=>{
+            console.log("arrow", this)         // arrow has no "this" so its call only parent's "This" (for this in react use bind function for this.)
+
+        }
+    }
+
+    item.getName();
+    item.getNameArrow();
+
+ 
+    
+
+</script>
+</html>
