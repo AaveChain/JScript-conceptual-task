@@ -136,9 +136,50 @@ we need to define the move() function, that changes the position of the box.
         elem2.addEventListener("click", myFunction, false);
 
 9:- ECMAScript 6  
-ECMAScript (ES) is a scripting language specification created to standardize JavaScript. ES6 is a superset of JavaScript (ES5). It introduced new conventions and OOP concepts such as classes.
+ECMAScript (ES) is a scripting language specification created to standardize JavaScript. ES6 is a superset of JavaScript (ES5). It introduced new conventions and #OOP concepts such as classes.
    A. var & let
-   The var keyword, which defines a variable globally, or locally to an entire function regardless of block scope, let allows you to declare variables that are limited in scope to the block, statement, or expression in which they are used.
+   The var keyword, which defines a variable #globally, or #locally to an entire function regardless of block scope, let allows you to declare variables that are limited in scope to the block, statement, or expression in which they are used.
+
+   B. const
+   const variables have the same scope as variables declared using let. The difference is that const variables are immutable - they are not allowed to be reassigned.
+
+   C. Template Literals in ES6
+   Template literals are enclosed by the backtick (` `) character instead of double or single quotes.The ${expression} is a placeholder, and can include any expression, which will get evaluated and inserted into the template literal.
+         let a=8;
+         let b=34;
+         let msg= `The sum is ${a+b}`;
+         console.log(msg);
+
+9.1 Loops in ECMAScript 6
+The for...in loop is intended for iterating over the enumerable keys of an object.It could iterate in an arbitrary order. Also, the iterating variable is a string, not a number.
+       #for (let v in obj)
+ES6 introduces the new for...of loop, which creates a loop iterating over iterable objects.During each iteration the val variable is assigned the corresponding element in the list.
+       #for(let val of list)
+The for...of loop works for other iterable objects as well, including strings.Its also works on collections(Map, Set, WeakMap, and WeakSet).
+       for (let ch of "Hello")
+
+9.2 Functions in ECMAScript 6
+We can skip typing function and return, as well as some parentheses and braces. 'greet'has one argument and returns a message.
+         #cont greet= x => "Welcome " + x;
+If there are no parameters, an empty pair of parentheses should be used, as in #const x = () => alert("Hi");  
+     A. ForEach Method 
+     for each element of the array we need to execute a function then use this method of the array tocall a function for each element.
+          const arr =[2,3,7,8]
+          arr.forEach(v => {
+             console.log(v*2);
+          });
+9.3 Default Parameters in ES6
+
+
+
+
+       
+               
+
+
+
+
+
 
 
    
