@@ -1,0 +1,144 @@
+<html>
+<head>
+    <title>ECMA Learn</title>
+</head>
+<body>
+    <h1>oops concepts</h1>
+    
+
+<!script>
+    //CLASSES
+    class Fruits{
+        name = "orange"
+        constructor()
+        {
+            console.log("constructor",this.name)
+        }
+        getFruits(item)
+        {
+            //console.log("function")
+            //return "apple"
+            return item
+        }
+
+    }
+    let f1= new Fruits;
+    //f1.getFruits();
+    console.log(f1.getFruits("apple"))
+    console.log(f1.name)                     //class instance call
+</script>
+<!script>
+    //INHERITANCE
+    class Category{
+        dryFruits(){
+            return "Almond is dry fruit"
+        }
+        pomeFruits(){
+            return "apple is pome"
+        }
+    }
+    class Fruits extends Category{        //for inherit the class of category in fruits
+        constructor(){
+            super()                         // use super constructor for calling purpose of parent class constructor
+            console.log("constructor")
+        }
+        getFruits(){
+            return "you got Apple."
+        }
+    }
+    let f1=new Fruits;
+    let c1=new Category;
+    console.log(f1.pomeFruits())     // call child class within parent class then inherit the functions
+    //console.log(c1.dryFruits()) 
+    
+</script>
+<!script>
+    //Lexical Scope for This
+    ///means range of This in function bcz This lost in btw function that's why we are using arrow function
+
+
+    let data= {
+        list:'friends',
+        names: ['peter', 'bruce', 'sam'],
+        getFriends:function()
+        {
+            //this.names.map(function(item){         //..function scope start here new so This lost then give undefined so use arrow
+            this.names.map((item)=>{    
+
+                console.log(this.list,item)
+            })
+        }
+    }
+
+    data.getFriends()
+
+
+</script>
+<!script>
+
+    //REST OPERATOR
+    //maens remains things or parameters , if we use within function '...' then take all parameters of function and gives result in array form.
+
+    //function fruits(...a)
+    function fruits(a,...z)
+    {
+        console.log("fruits",z)
+    }
+
+    //function test()
+    //{                           //in rest, we can use function also
+
+    //}
+
+    fruits('apple','banana','papaya','kiwi','orange');      //test);
+
+
+
+</script>
+
+
+<!script>
+    //PROMISE
+    //give output immediately use prommise function with resolved and reject.
+
+    //let a=undefined;
+   
+    //let promiseDate= new Promise((resolved,reject)=>{
+        //setTimeout(() => {
+        //a="hello Ecma"
+        //resolved("done")
+    //}, 3000);
+    //})
+
+    //promiseData.then(()=>{
+        //alert(a);
+
+    //})
+    var asyncCall =  new Promise((resolve, reject) => {
+       // do something
+       resolve();
+    }).then(()=> {   
+       console.log('DON!');
+    })
+
+
+</script>
+<!script>
+    ///GLOBAL FUNCTION
+    //ISFINITE
+    //console.log(isFinite((null)))    ///10, undefined, 10/1,... number return then gives true and otherwise true
+    // ISNaN
+    console.log(isNaN((null)))        // number return then gives false and otherwise true
+
+</script>
+<script>
+    ///
+
+</script>
+
+
+
+</body>
+
+
+</html>
